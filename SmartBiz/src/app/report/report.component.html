@@ -1,0 +1,12 @@
+<p>report works!</p>
+<div class="report-section">
+  <h2>📊 Business Reports</h2>
+
+  <div class="report-cards">
+    <div class="report-card" *ngFor="let report of reports">
+      <h3>{{ report.title }}</h3>
+      <p class="value">{{ report.value }}</p>
+      <p class="description">{{ report.description }}</p>
+    </div>
+  </div>
+</div>

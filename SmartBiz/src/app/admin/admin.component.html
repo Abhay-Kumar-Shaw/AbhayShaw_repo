@@ -1,0 +1,46 @@
+<div class="admin-dashboard">
+  <h1 class="welcome">Welcome, Admin</h1>
+
+  <!-- Overview Cards -->
+  <div class="overview-cards" *ngIf="activeSection === 'dashboard' || !activeSection">
+    <div class="card">Total Customers: {{ customersCount }}</div>
+    <div class="card">Total Products: {{ productsCount }}</div>
+    <div class="card">Total Sales: ₹{{ totalSales }}</div>
+    <div class="card">Pending Payments: ₹{{ pendingPayments }}</div>
+  </div>
+
+  <!-- Quick Access Buttons -->
+  <div class="quick-links">
+    <button routerLink="/add-customer">Add Customer</button>
+    <button routerLink="/add-product">Add Product</button>
+    <button routerLink="/sales">New Sale</button>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="admin-nav">
+    <a (click)="showSection('dashboard')">Dashboard</a>
+    <a (click)="showSection('customers')">Customers</a>
+    <a (click)="showSection('products')">Products</a>
+    <a (click)="showSection('transactions')">Transactions</a>
+    <a (click)="showSection('reports')">Reports</a>
+    <a routerLink="/">Logout</a>
+  </nav>
+
+  <!-- Dynamic Section Rendering -->
+  <div *ngIf="activeSection === 'customers'">
+    <app-customers></app-customers>
+  </div>
+
+  <div *ngIf="activeSection === 'products'">
+    <app-products></app-products>
+  </div>
+
+  <div *ngIf="activeSection === 'transactions'">
+  <app-transactions></app-transactions>
+</div>
+<div *ngIf="activeSection === 'reports'">
+  <app-report></app-report>
+</div>
+
+
+</div>

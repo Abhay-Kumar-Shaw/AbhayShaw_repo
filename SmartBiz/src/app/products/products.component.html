@@ -1,0 +1,37 @@
+<h2>Product List</h2>
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Item Name</th>
+      <th>Price (₹)</th>
+      <th>Stock</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index">
+      <ng-container *ngIf="editingIndex === i; else viewRow">
+        <td><input [(ngModel)]="editedProduct.id" type="number" /></td>
+        <td><input [(ngModel)]="editedProduct.name" /></td>
+        <td><input [(ngModel)]="editedProduct.price" type="number" /></td>
+        <td><input [(ngModel)]="editedProduct.stock" type="number" /></td>
+        <td>
+          <button (click)="saveProduct()">Save</button>
+          <button (click)="cancelEdit()">Cancel</button>
+        </td>
+      </ng-container>
+
+      <ng-template #viewRow>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.stock }}</td>
+        <td>
+          <button (click)="editProduct(i)">Edit</button>
+          <button (click)="deleteProduct(i)">Delete</button>
+        </td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>

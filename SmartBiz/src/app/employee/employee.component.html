@@ -1,0 +1,20 @@
+<div class="employee-dashboard">
+  <h1 class="welcome">Welcome, {{ employeeName || 'Employee' }}</h1>
+
+  <!-- Quick Actions -->
+  <div class="quick-actions">
+    <button routerLink="/make-sale">Make Sale</button>
+    <button routerLink="/add-customer">Add Customer</button>
+    <button routerLink="/customers">View Customers</button>
+    <button routerLink="/products">View Products</button>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="employee-nav">
+    <a routerLink="/employee">Dashboard</a>
+    <a routerLink="/make-sale">Make Sale</a>
+    <a routerLink="/add-customer">Add Customer</a>
+    <a routerLink="/products">View Products</a>
+    <a routerLink="/">Logout</a>
+  </nav>
+</div>

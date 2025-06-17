@@ -1,0 +1,23 @@
+<div class="transaction-table">
+  <h2>Transaction Records</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Customer</th>
+        <th>Product</th>
+        <th>Amount (₹)</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tx of transactions">
+        <td>{{ tx.id }}</td>
+        <td>{{ tx.customerName }}</td>
+        <td>{{ tx.productName }}</td>
+        <td>{{ tx.amount }}</td>
+        <td>{{ tx.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,178 @@
+.hero-container {
+  background-image: url('/assets/blockchain-digital-ledger.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+.button-container {
+  text-align: center;
+}
+
+.btn {
+  padding: 18px 50px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 15px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Shine effect */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  transform: rotate(25deg);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* SmartBiz Button */
+.smartbiz-btn {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+}
+
+/* Admin Button */
+.admin-btn {
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  color: #fff;
+}
+
+/* Employee Button */
+.employee-btn {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: #fff;
+}
+
+/* Container for secondary buttons */
+.sub-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+}
+.quote-box {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
+  animation: rotate 10s linear infinite;
+  z-index: 0;
+}
+
+.quote-text {
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 500;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+    
+}
+.welcome-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 2.5s ease-in-out infinite alternate;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px #ff512f, 0 0 20px #ff512f;
+  }
+  100% {
+    text-shadow: 0 0 20px #dd2476, 0 0 30px #dd2476;
+  }
+}
+.form-input {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  width: 300px;
+  max-width: 90%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin: 10px 0;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.form-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+
